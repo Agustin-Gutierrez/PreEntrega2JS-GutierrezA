@@ -30,7 +30,7 @@ function welcome() {
   );
 
   esNumero = false;
-  
+
   while (!esNumero) {
     if (!isNaN(TALLE) && TALLE > 0 && TALLE < 60) {
       esNumero = true;
@@ -104,24 +104,24 @@ function welcomeMessage(usuario1) {
 // Función para mostrar las opciones del menú en la consola
 function displayMenu() {
 
-// Array con los elementos del menú
-const elementos = [
-  "Elija el factor a tener en cuenta (ingrese el número deseado):",
-  "1. La morfología de su pie",
-  "2. El uso que harás del pie de gato",
-  "3. Tu nivel de experiencia",
-  "4. Presupuesto",
-  "5. Salir"
-];
-  
-// Recorrer el array utilizando un bucle for
-for (let i = 0; i < elementos.length; i++) {
-  console.log(elementos[i]);
-}
+  // Array con los elementos del menú
+  const elementos = [
+    "Elija el factor a tener en cuenta (ingrese el número deseado):",
+    "1. La morfología de su pie",
+    "2. El uso que harás del pie de gato",
+    "3. Tu nivel de experiencia",
+    "4. Presupuesto",
+    "5. Salir"
+  ]; 
+  // Recorrer el array utilizando un bucle for
+  for (let i = 0; i < elementos.length; i++) {
+    console.log(elementos[i]);
+  }
 }
 
 // Función para manejar el input del usuario y ejecutar la opción seleccionada
 function handleInput(option, usuario1) {
+
   switch (option) {
     case "1":
       console.log("Opción 1 seleccionada");
@@ -154,7 +154,6 @@ function handleInput(option, usuario1) {
       }else if(presupuesto > 100 && presupuesto <= 150){
         alert(
           "Recomendamos comprar La Sportiva Finale por U$D 137 \n\n" +
-
           "Presupuesto restante U$D " + (presupuesto - 137)
         );
         
