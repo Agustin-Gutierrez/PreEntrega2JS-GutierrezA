@@ -1,19 +1,22 @@
 let usuario1
 
+// Función de bienvenida al usuario a la página
 function welcome() {
   
+  // Se adquiere el nombre del usuario
   const NOMBRE = prompt(
     "Bienvenido a CórdobaClimbs, por favor ingresa tu nombre:"
   );
 
-
+  // Se adquiere la edad del usuario y se verifica que el dato sea válido
   let EDAD = prompt(
     "Por favor ingresa tu edad:"
   );
+
   let esNumero = false;
-  
+
   while (!esNumero) {
-    if (!isNaN(EDAD) && EDAD > 0 && EDAD < 60) {
+    if (!isNaN(EDAD) && EDAD > 0 && EDAD < 120) {
       esNumero = true;
       console.log("¡Se ingresó un número válido!");
     } else {
@@ -21,10 +24,11 @@ function welcome() {
     }
   }
 
-
+  // Se adquiere el talle de calzado del usuario y se verifica que el dato sea válido
   let TALLE = prompt(
     "Por favor ingresa tu talle de calzado:"
   );
+
   esNumero = false;
   
   while (!esNumero) {
@@ -36,7 +40,7 @@ function welcome() {
     }
   }
 
-
+  // Se adquiere el correo electrónico del usuario y se verifica que el dato sea válido
   let CORREO = prompt(
     "Por favor ingresa tu correo electrónico:"
   );
@@ -73,11 +77,12 @@ function welcome() {
   // Muestra los datos ingresados
   ingresedData(usuario1);
 
-  // Llame a la función con el mensaje de bienvenida
+  // Llama a la función con el mensaje de bienvenida
   welcomeMessage(usuario1.nombre);
 
 }
 
+// Muestra los datos cargados por el usuario
 function ingresedData(usuario1) {
   alert(
     '- Nombre: ' + usuario1.nombre +
@@ -87,10 +92,11 @@ function ingresedData(usuario1) {
   );
 }
 
-function welcomeMessage(NOMBRE) {
+// Brinda un mensaje de bienvenida el sitio
+function welcomeMessage(usuario1) {
   alert(
     "Hola " +
-      NOMBRE +
+    usuario1.nombre +
       '! Los pies de gato son un tipo de calzado especializado utilizado en la escalada en roca. Son zapatos ajustados y flexibles diseñados específicamente para proporcionar un mayor agarre y sensibilidad en la superficie de la roca. Es por esto que elegir el modelo correcto es tan importante. (Presiona "OK")'
   );
 }
@@ -98,20 +104,20 @@ function welcomeMessage(NOMBRE) {
 // Función para mostrar las opciones del menú en la consola
 function displayMenu() {
 
-  // Array con los elementos del menú
-  const elementos = [
-    "Elija el factor a tener en cuenta (ingrese el número deseado):",
-    "1. La morfología de su pie",
-    "2. El uso que harás del pie de gato",
-    "3. Tu nivel de experiencia",
-    "4. Presupuesto",
-    "5. Salir"
-  ];
+// Array con los elementos del menú
+const elementos = [
+  "Elija el factor a tener en cuenta (ingrese el número deseado):",
+  "1. La morfología de su pie",
+  "2. El uso que harás del pie de gato",
+  "3. Tu nivel de experiencia",
+  "4. Presupuesto",
+  "5. Salir"
+];
   
-  // Recorrer el array utilizando un bucle for
-  for (let i = 0; i < elementos.length; i++) {
-    console.log(elementos[i]);
-  }
+// Recorrer el array utilizando un bucle for
+for (let i = 0; i < elementos.length; i++) {
+  console.log(elementos[i]);
+}
 }
 
 // Función para manejar el input del usuario y ejecutar la opción seleccionada
